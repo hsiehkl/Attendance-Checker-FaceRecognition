@@ -3,25 +3,26 @@
 
 ## Google API Authentication
 (Reference: [gspread](https://gspread.readthedocs.io/en/latest/oauth2.html))
+
 To access spreadsheets via Google Sheets API we need to authenticate and authorize the application.
 
 ### step 1: Enable API Access
 * Head to [Google Developers Console](https://console.developers.google.com/project) and create a new project (or select the one you already have).
 * In the box labeled “Search for APIs and Services”, search for “Google Drive API” and enable it.
 * In the box labeled “Search for APIs and Services”, search for “Google Sheets API” and enable it.
-![image](https://github.com/hsiehkl/Attendance-Checker/blob/master/material/1.png =100x50)
+<img src="https://github.com/hsiehkl/Attendance-Checker/blob/master/material/1.png" width="800" height="400">
 
 ### step 2: Create a Service Account
 * Go to “APIs & Services > Credentials” and choose “Create credentials > Service account key”.
-![image](https://github.com/hsiehkl/Attendance-Checker/blob/master/material/2.png =100x50)
+<img src="https://github.com/hsiehkl/Attendance-Checker/blob/master/material/2.png" width="800" height="400">
 * Fill out service account details.
-![image](https://github.com/hsiehkl/Attendance-Checker/blob/master/material/3.png =100x50)
+<img src="https://github.com/hsiehkl/Attendance-Checker/blob/master/material/3.png" width="800" height="400">
 * Set up service account permissions by selecting the role as Project > Editor.
-![image](https://github.com/hsiehkl/Attendance-Checker/blob/master/material/4.png =100x50)
+<img src="https://github.com/hsiehkl/Attendance-Checker/blob/master/material/4.png" width="800" height="400">
 * Done
-![image](https://github.com/hsiehkl/Attendance-Checker/blob/master/material/5.png =100x50)
+<img src="https://github.com/hsiehkl/Attendance-Checker/blob/master/material/5.png" width="800" height="400">
 * Select "ADD KEY" and create a new key as JSON format. (A JSON file should be automatically downloaded.)
-![image](https://github.com/hsiehkl/Attendance-Checker/blob/master/material/6.png =100x50)
+<img src="https://github.com/hsiehkl/Attendance-Checker/blob/master/material/6.png" width="800" height="400">
 
 ### step 3: Set up environment
 * Move JSON file to cred folder.
