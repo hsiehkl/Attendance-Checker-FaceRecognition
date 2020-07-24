@@ -30,9 +30,10 @@ def update(worksheet, name_list, date):
 
     for name in name_list:
 
-        if name in df['Name'].values:
-            row = df[df['Name']==name].index[0] + 2
+        if name.lower() in df['Name'].str.lower().values:
+            row = df[df['Name'].str.lower()==name.lower()].index[0] + 2
             worksheet.update_cell(row, column, 'O')
+            print(name, 'attended the class.')
         else:
             print('We cannot find this person in the attendance list.')
             
@@ -40,3 +41,5 @@ def update_attendence(sheet_name, name_list, date):
     worksheet = read_gsheet(sheet_name)
     update(worksheet, name_list, date)
     print('Finish updating attendence.')
+
+# update_attendence('BIPM2019_bigdata', ['Hsin-Ting', 'Theresia', 'Yuxin'], '7/24')
