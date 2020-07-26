@@ -6,6 +6,21 @@ import time
 from collections import defaultdict
 
 
+def predict(input_path, model_path):
+    
+    media_format = input_path.split('.')[1]
+
+    attendance_list = []
+    if media_format in ['png', 'jpg', 'jpeg']:
+        attendance_list = predict_pic(input_path, model_path)
+    elif media_format == 'mp4':
+        attendance_list = predict_video(input_path, model_path)
+    else:
+        print("Please provide media in png, jpg, jpeg or mp4 format.")
+
+    return attendance_list
+
+
 def predict_video(input_path, model_path):
 
     model = pickle.load(open('models/' + model_path, 'rb'))
@@ -51,6 +66,8 @@ def predict_video(input_path, model_path):
     print('Ops,{} have very low appearance rate, maybe s/he is someone else'.format(','.join(set(wrongly_recognized_list))))
     print('running time is {}'.format(time.time()-start))
 
+    return final_name_list
+
 
 def predict_pic(input_path, model_path):
 
@@ -75,3 +92,5 @@ def predict_pic(input_path, model_path):
             print('Ops! Someone looks too similar to {} and was wrongly recognized'.format(name))
     print('{}% of faces are recognized duplicatedly'.format(100-(len(set(face_names_image))/len(face_names_image))*100))
     print('running time is {}'.format(time.time()-start))
+
+    return list(set(face_names_image))
