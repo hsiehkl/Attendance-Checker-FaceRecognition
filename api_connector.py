@@ -38,8 +38,12 @@ def update(worksheet, name_list, date):
             print('We cannot find this person in the attendance list.')
             
 def update_attendence(sheet_name, name_list, date):
-    worksheet = read_gsheet(sheet_name)
-    update(worksheet, name_list, date)
-    print('Finish updating attendence.')
 
-# update_attendence('BIPM2019_bigdata', ['Hsin-Ting', 'Theresia', 'Yuxin'], '7/24')
+    if name_list != []:
+        worksheet = read_gsheet(sheet_name)
+        update(worksheet, name_list, date)
+        print('Finish updating attendence.')
+    else:
+        print('There is no any attendee.')
+
+# update_attendence('BIPM2019_bigdata', ['hsin-Ting', 'theresia', 'yuxin'], '7/23')
