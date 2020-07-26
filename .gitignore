@@ -2,6 +2,7 @@
 /train_dir
 /cred
 /raw_data
+/models
 google_sheets.json
 
 
