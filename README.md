@@ -84,8 +84,12 @@ MEDIA :
     The media(an image or a video) for attendance checking in the raw_data folder
 GOOGLE_SHEET :
     A key specified in the google_sheets.json file which will help us to find the corresponding path of a Google sheet.
+    This key will be also used for naming the prediction model.
 DATE :
     The date of attantence
 ```
 example:
 ```python run.py BIPM2019-bigdata course1.mp4 BIPM2019_bigdata 7/27```
+
+## Note
+* We do not train a new model every time if we detect that there is already an existing model. We name the pretrained model with the key in ```google_sheets.json```. If you want to retrain a new model, please delete the old one.
