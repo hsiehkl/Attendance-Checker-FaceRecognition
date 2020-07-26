@@ -31,9 +31,10 @@ def predict_video(input_path, model_path):
     name_dict = defaultdict(int)
 
     start = time.time()
+    print('Start processing video.')
     while True:
         # Take every frame
-        ret, frame = video_capture2.read()
+        ret, frame = video_capture.read()
 
         # Bail out when the video file ends
         if not ret:
