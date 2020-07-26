@@ -17,7 +17,5 @@ def main(train_path, media, sheet, date):
     update_attendence(sheet, attendance_list, date)
 
 
-    
-main('1', '1', '1')
-# if __name__ == "__main__":
-#     import plac; plac.call(main)
+if __name__ == "__main__":
+    import plac; plac.call(main)
