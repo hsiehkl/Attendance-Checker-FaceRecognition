@@ -2,6 +2,8 @@
 
 This is a small service for checking attendance in Goolge sheet based on recognizing people showing in a given image or video.
 
+Package Requirements: ```face_recognition```, ```dlib```, ```gspread```
+
 ## Setup
 
 For using the service, there are some preliminary setups needed to be finished.
