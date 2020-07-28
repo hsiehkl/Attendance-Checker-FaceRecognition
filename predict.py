@@ -64,7 +64,8 @@ def predict_video(input_path, model_path):
         else:
             wrongly_recognized_list.append(name)
     print('surely attended students are {}'.format(','.join(final_name_list)))
-    print('Ops,{} have very low appearance rate, maybe s/he is someone else'.format(','.join(set(wrongly_recognized_list))))
+    if len(wrongly_recognized_list) != 0:
+        print('Ops,{} have very low appearance rate, maybe s/he is someone else'.format(','.join(set(wrongly_recognized_list))))
     print('running time is {}'.format(time.time()-start))
 
     return final_name_list
