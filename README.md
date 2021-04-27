@@ -2,7 +2,7 @@
 
 This is a small service for checking attendance in Goolge sheet based on recognizing people showing in a given image or video.
 
-The service was developed under the contex of the Enterprise Architectures for Big Data course from the M.Sc. in Business Intelligence & process Management offered by the Berlin School of Economics and Law. 3 students worked together to achieve these results, during the course of the summer semester 2020. Full detail about the project was shown in the [presentaiton](https://github.com/hsiehkl/Attendance-Checker-FaceRecognition/blob/master/UAttented.pdf). (Note: Some pages were modified or hidden due to data privacy issue.)
+The service was developed under the contex of the Enterprise Architectures for Big Data course from the M.Sc. in Business Intelligence & process Management offered by the Berlin School of Economics and Law. 3 students worked together to achieve these results, during the course of the summer semester 2020. Full detail about the project was shown in the [presentaiton](https://github.com/hsiehkl/Attendance-Checker-FaceRecognition/blob/master/UAttented.pdf). (Note: Some pages were modified or hidden due to data privacy.)
 
 Package Requirements: ```face_recognition```, ```dlib```, ```gspread```
 
